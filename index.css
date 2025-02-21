@@ -18,12 +18,18 @@ ul li {
 .list-item {
   all: unset;
   cursor: pointer;
+  padding: 8px;
 }
-.list-item.active {
-  border: 1px black solid;
+.active {
+  background-color: black;
+  color: white;
 }
+.list-item:hover {
+  background-color: black;
+  color: white;
+}
+
 #root {
-  /* border: 1px black solid; */
   display: flex;
   align-items: center;
   justify-content: center;

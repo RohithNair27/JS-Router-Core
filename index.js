@@ -6,6 +6,7 @@ const templateLocation = [
 ];
 
 let root = document.getElementById("root");
+let listItem = document.querySelectorAll(".list-item");
 
 window.addEventListener("DOMContentLoaded", onClickNavigate);
 
@@ -33,16 +34,27 @@ async function pageData(pathName) {
   switch (pathName) {
     case "/":
       root.innerHTML = await getPageDataFromTemplates(0);
+      setAchorTagActive(0);
       break;
     case "/about":
       root.innerHTML = await getPageDataFromTemplates(1);
+      setAchorTagActive(1);
       break;
     case "/setting":
       root.innerHTML = await getPageDataFromTemplates(2);
+      setAchorTagActive(2);
       break;
     default:
       root.innerHTML = "404 not found";
   }
+}
+
+// just to set the list items active and inactive
+function setAchorTagActive(index) {
+  listItem.forEach((item, currentIndex) => {
+    if (currentIndex === index) item.classList.add("active");
+    else item.classList.remove("active");
+  });
 }
 
 // here popstate will call the function everytime we press on navigation icon in chrome
