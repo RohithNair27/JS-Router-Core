@@ -23,15 +23,16 @@ const AboutPage = ` <h1>About Page</h1>
 const settingPage = `<h1>Setting page</h1>
       <span>Why do we need a router if we can create SPAs so easily? </span>`;
 let root = document.getElementById("root");
+let anchorTags = document.querySelectorAll(".list-item");
+console.log(anchorTags);
 // onClickNavigate();
 window.addEventListener("DOMContentLoaded", onClickNavigate);
 
 function onClickNavigate(event) {
+  console.log("called");
   if (event) event.preventDefault();
   // Target will return the whole element and href will only return the url.
   let pathName = "";
-  //   let fullUrl = "";
-  console.log(event.target.href);
   if (event.type === "click") {
     pathName = event.target.href.split(PORT)[1];
   } else {
@@ -42,7 +43,6 @@ function onClickNavigate(event) {
   pageData(pathName);
 }
 function pageData(pathName) {
-  console.log("called", pathName);
   switch (pathName) {
     case "/":
       root.innerHTML = HomePage;

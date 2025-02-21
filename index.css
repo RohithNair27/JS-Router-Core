@@ -14,9 +14,13 @@ ul li {
   margin: 30px;
   font-size: 22px;
 }
-ul a {
+
+.list-item {
   all: unset;
   cursor: pointer;
+}
+.list-item.active {
+  border: 1px black solid;
 }
 #root {
   /* border: 1px black solid; */

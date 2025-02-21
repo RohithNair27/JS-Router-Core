@@ -4,17 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link href="./index.css" rel="stylesheet" />
+    <link href="index.css" rel="stylesheet" />
   </head>
   <body>
     <nav>
       <ul>
-        <li><a href="/" onclick="onClickNavigate(event)">Home</a></li>
         <li>
-          <a href="/about" onclick="onClickNavigate(event)">About</a>
+          <a class="list-item" href="/" onclick="onClickNavigate(event)"
+            >Home</a
+          >
         </li>
         <li>
-          <a href="/setting" onclick="onClickNavigate(event)">Setting</a>
+          <a class="list-item" href="/about" onclick="onClickNavigate(event)"
+            >About</a
+          >
+        </li>
+        <li>
+          <a class="list-item" href="/setting" onclick="onClickNavigate(event)"
+            >Setting</a
+          >
         </li>
       </ul>
     </nav>
